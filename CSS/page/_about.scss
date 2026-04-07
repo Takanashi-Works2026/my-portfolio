@@ -1,0 +1,229 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #bcdaf1;
+    padding: 24px;
+    margin: 8px;
+}
+
+.profile-title {
+    text-align: center;
+    padding-bottom: 40px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.profile-wrapper {
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background-color: rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+}
+
+.profile-ContentTitle {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+
+.profile-subTitle {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+/* カルーセル外枠 */
+.profile-card__item-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.profile-card__item-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+/* カルーセル本体 */
+.profileCard {
+    display: flex;
+    gap: 12px;
+    margin: 0;
+    padding: 8px 0 16px;
+    list-style: none;
+}
+
+/* カード1枚 */
+.profileCard__item {
+    display: flex;
+    flex: 0 0 calc((100% - 48px) / 5); /* PCで5枚 */
+    min-width: 220px;
+    flex-direction: column;
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+    scroll-snap-align: start;
+}
+
+.profileCard__item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.text-area {
+    display: block;
+    text-decoration: none;
+}
+
+.profileCard__img-area {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    padding: 0;
+}
+
+.profileCard__img-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.profileCard__title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 16px 0;
+    line-height: 1.4;
+    min-height: 2.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profileCard__text,
+.card__text {
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* タブレット */
+@media (max-width: 1024px) {
+    .profile {
+        padding: 20px 16px;
+    }
+
+    .profile-wrapper {
+        padding: 20px;
+    }
+
+    .profile-title {
+        font-size: 28px;
+        padding-bottom: 32px;
+    }
+
+    .profile-subTitle {
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+
+    .profileCard {
+        gap: 12px;
+        padding: 8px 0 16px;
+    }
+
+    .profileCard__item {
+        flex: 0 0 calc((100% - 12px) / 2.2); /* 2.2枚見せ */
+        min-width: 260px;
+    }
+
+    .profileCard__title {
+        font-size: 20px;
+    }
+}
+
+/* スマホ */
+@media (max-width: 540px) {
+    .profile {
+        padding: 16px 8px;
+        margin: 0;
+    }
+
+    .profile-title {
+        font-size: 24px;
+        padding-bottom: 24px;
+    }
+
+    .profile-wrapper {
+        padding: 16px;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .profile-ContentTitle {
+        font-size: 22px;
+        margin-bottom: 24px;
+    }
+
+    .profile-subTitle {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .profile-card__item-wrapper {
+        overflow-x: auto;
+        padding: 0;
+    }
+
+    .profileCard {
+        gap: 10px;
+        padding: 8px 0 12px;
+    }
+
+    .profileCard__item {
+        flex: 0 0 86%;
+        min-width: 0;
+        padding: 14px;
+    }
+
+    .profileCard__title {
+        font-size: 18px;
+        margin: 12px 0;
+        min-height: auto;
+    }
+
+    .profileCard__text,
+    .card__text {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+}
+
+/* さらに小さい端末 */
+@media (max-width: 500px) {
+    .profileCard__item {
+        flex: 0 0 88%;
+    }
+
+    .profileCard__title {
+        font-size: 17px;
+    }
+
+    .profileCard__text,
+    .card__text {
+        font-size: 13px;
+    }
+}

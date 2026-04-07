@@ -1,0 +1,112 @@
+// fv
+.contact {
+    position: relative;
+    padding: 120px 20px;
+    // 背景画像
+    background: url("../img/contact_backgroundimage.jpg")no-repeat center / cover;
+    align-items: center;
+}
+/* ===== 読みやすくするグラデーション ===== */
+.contact::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:rgba(255, 255, 255, 0.5);
+}
+
+.contact__inner {
+    position: relative;
+    z-index: 1;
+    max-width: 768px;
+    /* ← これが超重要 */
+    margin: 0 auto;
+}
+/*お問い合わせフォームのタイトル*/
+.contact__title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    padding: 16px;
+}
+/*フォームの大枠*/
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+/*フォームの質問一つ一つ*/
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+/*ラベル*/
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+/*input*/
+.form-group input {
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+/*textarea*/
+.form-group textarea {
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid#ccc;
+    font-size: 16px;
+}
+/*プライバシーチェックマーク*/
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+/*送信ボタン*/
+.form-submit {
+    text-align: center;
+}
+.form-submit button {
+display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px auto 0;
+    padding: 10px 22px;
+    border-radius: 9999px;
+
+    background: #f2dae6;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+    
+
+.form-submit button::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+
+    transform: rotate(45deg);
+    transition: transform .3s;
+}
+
+.form-submit button:hover {
+    transform: translateY(-2px);
+}
+
+.form-submit button:hover::after {
+    transform: rotate(45deg) translateX(4px);
+}
+/*スマホサイズの時*/
+@media (max-width: 540px) {
+    
+}

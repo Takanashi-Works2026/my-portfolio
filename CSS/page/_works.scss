@@ -1,0 +1,75 @@
+.section__works {
+    margin-top: 0;
+    background-color: #bcdaf1;
+    padding: 16px;
+}
+
+.works-sectionTitle {
+    margin: 0 auto;
+    padding: 16px;
+    text-align: center;
+    padding-bottom: 40px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.works-sectionP {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.works-section {
+    background-color: #fff;
+    margin: 0 16px 16px 16px;
+}
+
+.works-sectionContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+.works-HPdesignTitle {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 40px 0;
+    padding: 24px;
+}
+.works-HPdesign {
+    min-width: 0;
+}
+
+.works-HPdesignImage img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.works-HPdesign__title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 16px;
+}
+.works-HPdesign__text {
+    text-align: center;
+}
+span {
+  color: #333;
+  padding: 8px 16px;
+}
+
+/* タブレット */
+@media (max-width: 1024px) {
+    .works-sectionContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* スマホ */
+@media (max-width: 600px) {
+    .works-sectionContainer {
+        grid-template-columns: 1fr;
+        margin: 8px;
+    }
+}

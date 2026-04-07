@@ -1,0 +1,189 @@
+.about-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 40px auto 0;
+    padding: 10px 22px;
+    border-radius: 9999px;
+
+    background: #f2f0da;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: 0.3s;
+
+}
+
+.about-button::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+
+    transform: rotate(45deg);
+    transition: transform .3s;
+}
+
+.about-button:hover {
+    transform: translateY(-2px);
+}
+
+.about-button:hover::after {
+    transform: rotate(45deg) translateX(4px);
+}
+
+.works-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin: 7px auto 0;
+    padding: 10px 10px;
+    border: 2px solid #333;
+    border-radius: 9999px;
+
+    background: #f2f0da;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: 0.3s;
+
+}
+
+.works-button::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+
+    transform: rotate(45deg);
+    transition: transform .3s;
+}
+
+.works-button:hover {
+    transform: translateY(-2px);
+}
+
+.works-button:hover::after {
+    transform: rotate(45deg) translateX(4px);
+}
+
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin: 7px auto 0;
+    padding: 10px 22px;
+    border: 2px solid #333;
+    border-radius: 9999px;
+    background: #f2dae6;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: 0.3s;
+
+}
+
+.contact-button::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+
+    transform: rotate(45deg);
+    transition: transform .3s;
+}
+
+.contact-button:hover {
+    transform: translateY(-2px);
+}
+
+.contact-button:hover::after {
+    transform: rotate(45deg) translateX(4px);
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin: 7px auto 0;
+    padding: 10px 22px;
+    border: 2px solid #333;
+    border-radius: 9999px;
+
+    background: #dae6f2;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: 0.3s;
+
+}
+
+.back-button::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+
+    transform: rotate(45deg);
+    transition: transform .3s;
+}
+
+.back-button:hover {
+    transform: translateY(-2px);
+}
+
+.back-button:hover::after {
+    transform: rotate(45deg) translateX(4px);
+}
+
+#page-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    background: #dae6f2;
+    text-decoration: none;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+/*矢印*/
+#page-top::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+
+    border-top: 2px soild #333;
+    border-left: 2px soild #333;
+
+    transform: rotate(45deg);
+}
+/*ホバー*/
+#page-top:hover {
+    transform: translateY(-3px);
+}
+/*button-containerのCSS*/
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
